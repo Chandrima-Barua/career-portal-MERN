@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect('mongodb+srv://chandrima:crudmongo@cluster0.kq65b.mongodb.net/mongocrud?retryWrites=true&w=majority',
+mongoose.connect(url,
   {
     useNewUrlParser: true,
     useFindAndModify: false,
