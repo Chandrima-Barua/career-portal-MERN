@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import CareerType from "./components/career-data";
+import Apply from "./components/apply";
+import history from './components/history';
+import SubmitForm from './components/submit.form';
+import Confirmation from './components/confirmation';
+import Final from './components/final';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className='app'>
+        <Router history={history}>
+            <Switch>
+                <Route path="/" exact component={CareerType} />
+                <Route path="/apply" component={Apply} />
+                <Route path="/submitform" component={SubmitForm} />
+                <Route path="/confirmation" component={Confirmation} />
+                <Route path="/final" component={Final} />
+
+            </Switch>
+        </Router>
+        </div>
+    )
+}
 }
 
 export default App;
