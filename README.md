@@ -1,8 +1,12 @@
-## Pre-requisite 
-MERN Stacks has to be installed
+# Pre-requisite 
+MERN stacks has to be installed
 
-## Run the application 
-1. npm install
-2. change the url in server/db.js file with the gived mongodb url in email
-3. nodemon start - to start the frontend
-4. node server/config.js - to start backend
+## Run the application
+
+To run the application, open a terminal and follow below instruction
+
+1. Run command `npm install`
+2. Run command `npm install -g nodemon`
+3. Open server/db.js and set USER_NAME, password, Database Name for mongodb cluster.
+4. To start the frontend, run `nodemon start`
+5. To start backend service, run `node server/config.js`

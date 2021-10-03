@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect(url,
+mongoose.connect('mongodb+srv://<USER_NAME >:<password>@cluster0.kq65b.mongodb.net/<Database Name>?retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
     useFindAndModify: false,
